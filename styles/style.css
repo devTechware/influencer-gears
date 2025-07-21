@@ -41,6 +41,7 @@ a {
 /* Header Section Styles */
 
 .header-container {
+  /* outline: 2px solid red; */
   max-width: 83vw;
   margin: 0 auto;
   margin-top: 10vh;
@@ -102,21 +103,50 @@ a {
 
 .banner-img {
   max-width: 38%;
+  max-height: 100%;
   background: url("../assets/images/Circle\ design.svg") no-repeat;
   background-position: center;
+  /* background-size: contain; */
   background-size: contain;
 }
 
 #main-camera {
-  max-width: 90%;
+  max-height: 90%;
   position: relative;
   top: 50%;
-  left: 5%;
+  left: 8%;
 }
+
+/* Company Logo Section Style */
+
+.company-logo-container {
+  /* border-image: linear-gradient(
+    to right,
+    rgba(192, 204, 218, 0.1),
+    rgba(192, 204, 218, 0.6),
+    rgba(192, 204, 218, 0.1)
+  ); */
+  border-top: 1px solid rgba(192, 204, 218, 1);
+  border-bottom: 1px solid rgba(192, 204, 218, 1);
+  max-width: 77vw;
+  margin: 0 auto;
+  margin-top: 8vh;
+  padding: 4vh 0;
+  display: flex;
+  gap: 3vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
 
 /* Medium Devices Style */
 
 @media screen and (min-width: 576px) and (max-width: 991px) {
+  .header-container {
+    margin-top: 6vh;
+  }
+
   .nav-container {
     font-size: 1.25rem;
   }
@@ -166,10 +196,22 @@ a {
   #main-camera {
     max-width: 90%;
   }
+
+  .company-logo-container {
+    flex-wrap: wrap;
+  }
+
+  .company-logo-container img {
+    margin: 2vh 0;
+  }
 }
 /* Small Devices Style */
 
 @media screen and (max-width: 576px) {
+  .header-container {
+    margin-top: 4vh;
+  }
+
   .nav-container {
     font-size: 1rem;
   }
@@ -218,5 +260,13 @@ a {
 
   #main-camera {
     max-width: 90%;
+  }
+
+  .company-logo-container {
+    flex-wrap: wrap;
+  }
+
+  .company-logo-container img {
+    margin: 2vh 0;
   }
 }
