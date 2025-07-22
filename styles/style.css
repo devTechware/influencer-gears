@@ -16,7 +16,6 @@ body {
 
 img {
   display: block;
-  max-inline-size: 100%;
 }
 
 li {
@@ -116,6 +115,7 @@ a {
   top: 50%;
   left: 4%;
   padding: 2vw;
+  max-inline-size: 100%;
 }
 
 /* Company Logo Section Style */
@@ -224,6 +224,41 @@ a {
   justify-content: end;
   align-items: center;
   gap: 1vw;
+}
+
+/* Featured Products Section Styles */
+
+.featured-products-container {
+  outline: 2px solid red;
+  max-width: 77vw;
+  margin: 11.11vh auto;
+  display: flex;
+  align-items: center;
+  gap: 9vw;
+}
+
+.featured-products-img {
+  max-height: 100%;
+}
+
+.featured-products-info {
+  max-width: 50vw;
+  max-inline-size: 100%;
+}
+
+.featured-products-info h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.featured-products-info p {
+  color: rgba(108, 108, 108, 1);
+  font-weight: 700;
+  max-inline-size: 80%;
+}
+
+.featured-products-info button {
+  border-radius: 0px;
 }
 
 /* Medium Devices Style */
@@ -365,5 +400,26 @@ a {
 
   .popular-products {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .featured-products-container {
+    outline: 2px solid red;
+    max-width: 77vw;
+    margin: 11.11vh auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featured-products-img > img {
+    max-inline-size: 100%;
+  }
+
+  .featured-products-info {
+    max-width: 100vw;
+    max-inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-items: start;
   }
 }
